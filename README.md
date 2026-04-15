@@ -96,7 +96,7 @@ Password: `raspberry`
 ```bash
 ssh pi@raspberrypi.local
 password: pi
-export DISPLAY=10.69.x.x:0.0    # replace with your laptop's IP
+export DISPLAY=10.69.236.246:0.0    # replace with your laptop's IP
 cd "SEED project"
 python autocontrol.py
 ```
