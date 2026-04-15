@@ -34,6 +34,12 @@ The TMC5072 communicates over SPI. Connect it to the Pi's SPI0 pins:
 Connect Motor 1 to the TMC5072's Motor 1 output and Motor 2 to Motor 2. Refer to your TMC5072 board's silkscreen for exact motor coil pinout (A1, A2, B1, B2).
 
 ---
+## Connect To Raspberry PI Via RealVNC Viewer
+
+<img width="888" height="630" alt="image" src="https://github.com/user-attachments/assets/770c62ac-e85f-4839-87f7-99a7a00d521a" />
+
+<img width="1045" height="1009" alt="image" src="https://github.com/user-attachments/assets/76150070-bbea-428d-a0b1-24e7a47957f0" />
+
 
 ## One-Time Pi Setup (do this once after flashing a new OS)
 
