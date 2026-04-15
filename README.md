@@ -36,6 +36,28 @@ Connect Motor 1 to the TMC5072's Motor 1 output and Motor 2 to Motor 2. Refer to
 ---
 ## Connect To Raspberry PI Via RealVNC Viewer
 
+# 🔧 Automatic Setup — One-Time Install (RUN THIS FIRST)
+
+> ⚠️ Run this ONCE after flashing Raspberry Pi OS before using the project.
+
+## Full system install (libraries + SPI + dependencies)
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+
+# Enable SPI (manual step required)
+sudo raspi-config
+# Interface Options → SPI → Enable → Yes → Finish → Reboot
+
+sudo apt install python3-pip python3-opencv python3-pil python3-pil.imagetk -y
+sudo apt install libatlas-base-dev libopenjp2-7 libtiff5 python3-tk -y
+
+pip3 install numpy --break-system-packages
+pip3 install pillow --break-system-packages
+pip3 install spidev --break-system-packages
+pip3 install RPi.GPIO --break-system-packages
+
 <img width="888" height="630" alt="image" src="https://github.com/user-attachments/assets/770c62ac-e85f-4839-87f7-99a7a00d521a" />
  Open the raspberry pi 4 montior with RealVNC Viewer
 
@@ -43,9 +65,13 @@ Connect Motor 1 to the TMC5072's Motor 1 output and Motor 2 to Motor 2. Refer to
 <img width="1045" height="1009" alt="image" src="https://github.com/user-attachments/assets/76150070-bbea-428d-a0b1-24e7a47957f0" />
 Select Terminal
 
-<img width="969" height="967" alt="image" src="https://github.com/user-attachments/assets/9604c9bc-8c3a-45e3-a504-d292da4585ba" />
-Use this command pi@raspberrypi:~ $ sudo python3 autocontrol.py
+<img width="897" height="854" alt="image" src="https://github.com/user-attachments/assets/cdad3917-1050-4c66-a796-36e9aedff936" />
 
+Use this command cd "SEED project"
+
+
+<img width="748" height="655" alt="image" src="https://github.com/user-attachments/assets/6fbcaa8f-6148-4de0-8797-8a110603d414" />
+Use this command python autocontrol.py
 
 <img width="804" height="625" alt="image" src="https://github.com/user-attachments/assets/c592ff42-67fe-45fb-9ba2-23a3edbd2058" />
 Click anywhere to move the motor
