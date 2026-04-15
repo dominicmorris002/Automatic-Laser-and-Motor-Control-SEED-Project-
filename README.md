@@ -36,28 +36,6 @@ Connect Motor 1 to the TMC5072's Motor 1 output and Motor 2 to Motor 2. Refer to
 ---
 ## Connect To Raspberry PI Via RealVNC Viewer
 
-# 🔧 Automatic Setup — One-Time Install (RUN THIS FIRST)
-
-> ⚠️ Run this ONCE after flashing Raspberry Pi OS before using the project.
-
-## Full system install (libraries + SPI + dependencies)
-
-```bash
-sudo apt update
-sudo apt upgrade -y
-
-# Enable SPI (manual step required)
-sudo raspi-config
-# Interface Options → SPI → Enable → Yes → Finish → Reboot
-
-sudo apt install python3-pip python3-opencv python3-pil python3-pil.imagetk -y
-sudo apt install libatlas-base-dev libopenjp2-7 libtiff5 python3-tk -y
-
-pip3 install numpy --break-system-packages
-pip3 install pillow --break-system-packages
-pip3 install spidev --break-system-packages
-pip3 install RPi.GPIO --break-system-packages
-
 <img width="888" height="630" alt="image" src="https://github.com/user-attachments/assets/770c62ac-e85f-4839-87f7-99a7a00d521a" />
  Open the raspberry pi 4 montior with RealVNC Viewer
 
@@ -214,3 +192,25 @@ Adjust these in `tmc5072.ini` to tune motor speed and precision for your specifi
 **SPI / FileNotFoundError** — SPI is not enabled. Run `sudo raspi-config` → Interface Options → SPI → Yes, then reboot.
 
 **Motor doesn't move but GUI works** — Check your wiring to the TMC5072 (especially CSN/CS pin) and confirm `spi_device = 0` and `spi_cs = 0` in `autocontrol.py`.
+
+---
+
+## 🔧 FULL AUTO INSTALL (COPY-PASTE SETUP COMMANDS)
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+sudo raspi-config   # Enable SPI manually
+
+sudo apt install python3-pip python3-opencv python3-pil python3-pil.imagetk -y
+sudo apt install libatlas-base-dev libopenjp2-7 libtiff5 python3-tk -y
+
+pip3 install numpy --break-system-packages
+pip3 install pillow --break-system-packages
+pip3 install spidev --break-system-packages
+pip3 install RPi.GPIO --break-system-packages
+
+ls /dev/spi*
+```
+
+---
