@@ -37,8 +37,18 @@ Connect Motor 1 to the TMC5072's Motor 1 output and Motor 2 to Motor 2. Refer to
 ## Connect To Raspberry PI Via RealVNC Viewer
 
 <img width="888" height="630" alt="image" src="https://github.com/user-attachments/assets/770c62ac-e85f-4839-87f7-99a7a00d521a" />
+ Open the raspberry pi 4 montior with RealVNC Viewer
 
+ 
 <img width="1045" height="1009" alt="image" src="https://github.com/user-attachments/assets/76150070-bbea-428d-a0b1-24e7a47957f0" />
+Select Terminal
+
+<img width="969" height="967" alt="image" src="https://github.com/user-attachments/assets/9604c9bc-8c3a-45e3-a504-d292da4585ba" />
+Use this command pi@raspberrypi:~ $ sudo python3 autocontrol.py
+
+
+<img width="804" height="625" alt="image" src="https://github.com/user-attachments/assets/c592ff42-67fe-45fb-9ba2-23a3edbd2058" />
+Click anywhere to move the motor
 
 
 ## One-Time Pi Setup (do this once after flashing a new OS)
