@@ -27,7 +27,9 @@ The TMC5072 communicates over SPI. Connect it to the Pi's SPI0 pins:
 | SCK (CLK)   | Pin 23            | GPIO11 |
 | CSN (CS)    | Pin 24            | GPIO8  |
 | GND         | Pin 6 (or any GND)| GND  |
-| VCC         | External 5V supply | —   |
+| VCCIO         | External 5V supply | —   |
+| ENN         | GND                | GND   |
+| CLK16         | GND                | GND   |
 
 > ⚠️ The TMC5072 motor supply voltage (VM) must come from an external power supply — do NOT power it from the Pi's 5V pin. Motor current draw will damage the Pi.
 
